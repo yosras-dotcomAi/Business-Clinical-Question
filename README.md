@@ -3,8 +3,8 @@
 ## 📌 Overview
 This repository serves as the **Clinical & Business Framing Layer** for the **TAVI Market Opportunity Engine**. It bridges clinical cardiovascular realities with healthcare business intelligence by defining core strategic questions, clinical coding standards, and public benchmarking methodologies.
 
-🔗 **Connected Dashboard:** [TAVI-GCC Market Opportunity Model](https://github.com/yosras-dotcomAi/TAVI-GCC-market-opportunity-mode) *(Update with your live Streamlit URL if applicable)*
-
+🔗 **Connected Dashboard:** [TAVI-GCC Market Opportunity Model](https://github.com/yosras-dotcomAi/TAVI-GCC-market-opportunity-mode) 
+https://tavi-gcc-market-opportunity-mode-iy7nxbmcjkkcg6eudp7aud.streamlit.app/
 ---
 
 ## 🎯 Core Business-Clinical Questions
