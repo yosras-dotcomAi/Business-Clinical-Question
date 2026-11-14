@@ -1,0 +1,7 @@
+covariate,before,after
+age,-0.281,-0.018
+comorbidity_score,-0.673,-0.009
+gender_Male,0.036,-0.003
+department_Endocrinology,-0.066,0.003
+department_Family Medicine,0.048,0.011
+department_Internal Medicine,0.026,-0.036
