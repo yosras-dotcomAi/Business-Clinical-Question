@@ -1,0 +1,5 @@
+Treatment Function Name,RTT Part Description,pathways_total,within_18_weeks,over_18_weeks,over_52_weeks,pct_within_18_weeks,pct_over_52_weeks
+Cardiology Service,Completed Pathways For Admitted Patients,10102.0,6541.0,3561.0,454.0,64.7,4.49
+Cardiology Service,Incomplete Pathways,355950.0,245123.0,110827.0,2660.0,68.9,0.75
+Cardiothoracic Surgery Service,Completed Pathways For Admitted Patients,1369.0,959.0,410.0,35.0,70.1,2.56
+Cardiothoracic Surgery Service,Incomplete Pathways,8262.0,6108.0,2154.0,95.0,73.9,1.15
