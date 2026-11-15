@@ -59,6 +59,30 @@ Each lever is a **hypothesis to test**, not a conclusion. Results get added to t
 
 Each lever is scored on **impact** (extra procedures per year in the model) and **feasibility** (time and cost to act), then plotted on a simple 2x2 grid in the dashboard. The output is a short list of two or three levers to act on first, not a long list of ideas.
 
+## First results: NHS England RTT, September 2026
+
+![RTT baseline chart](charts/chart_rtt_baseline.png)
+
+| Specialty | Pathway type | Pathways | Within 18 weeks | Over 52 weeks |
+|---|---|---|---|---|
+| Cardiology | Still waiting | 355,950 | 68.9% | 2,660 (0.75%) |
+| Cardiology | Treated with admission | 10,102 | 64.7% | 454 (4.49%) |
+| Cardiothoracic Surgery | Still waiting | 8,262 | 73.9% | 95 (1.15%) |
+| Cardiothoracic Surgery | Treated with admission | 1,369 | 70.1% | 35 (2.56%) |
+
+What this shows, and what it does not:
+
+- **Patients treated with an admission waited longer than the general waiting list.** In Cardiology, 4.49% of admitted pathways waited over 52 weeks, against 0.75% of pathways still waiting. Procedures such as TAVI are delivered through admission, so this points to the procedure stage as a bottleneck (levers 2 and 3).
+- **Hospitals differ widely.** Among 120 Cardiology services with 100 or more waiting pathways, the share treated within 18 weeks ranges from about 44% to 97% (median about 72%). Among 17 Cardiothoracic services it ranges from about 52% to 93% (median about 78%).
+- **This is specialty-level data.** It does not identify TAVI patients, and the file does not say which hospitals perform TAVI. The results are a context baseline, not a TAVI waiting time.
+
+Data and code: `data/` holds the cleaned files, built from the NHS England RTT full extract for September 2026. `analyze_rtt.py` rebuilds the chart from them.
+
+```
+pip install -r requirements.txt
+python analyze_rtt.py
+```
+
 ## Sub-questions behind the analysis
 
 1. **Volume and growth:** how have TAVI volumes changed compared with surgical aortic valve replacement (SAVR)?
@@ -80,10 +104,11 @@ Each lever is scored on **impact** (extra procedures per year in the model) and 
 
 - [x] Business and clinical questions defined
 - [x] Companion dashboard live
-- [ ] RTT Cardiology and Cardiothoracic baseline added to `data/`
+- [x] RTT Cardiology and Cardiothoracic baseline added to `data/`
+- [x] Baseline analysis script and chart added
 - [ ] Pathway simulation (synthetic) added
 - [ ] Lever ranking added to the dashboard
-- [ ] Results and recommendations added to this README
+- [ ] Recommendations added to this README
 
 ## Limitations
 
