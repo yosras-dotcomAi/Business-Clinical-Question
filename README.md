@@ -83,6 +83,50 @@ pip install -r requirements.txt
 python analyze_rtt.py
 ```
 
+## Pathway simulation (synthetic)
+
+![Pathway scenarios](charts/chart_pathway_scenarios.png)
+
+A weekly simulation of a regional TAVI program: referral, assessment (echo, CT, clinic), heart team, pre-procedure work, then a procedure slot. Each stage has a weekly capacity and patients are served first come, first served. **All patient-level data is synthetic.** The baseline is calibrated so the mean referral-to-procedure time is about 142 days, the UK estimate quoted above (an advocacy source, so treat it as an estimate). 40 repeated runs are averaged for every scenario.
+
+| Assumption | Value |
+|---|---|
+| Referrals | 12 a week (about 620 a year) |
+| Capacity | Assessment 14 a week, heart team 14 a week, procedure slots 12.5 a week |
+| Mean stage delays | 10.6 weeks to heart team readiness, 8.7 weeks to procedure readiness (set to match the 142-day total) |
+| Not modelled | Urgent fast-tracking, deaths or drop-outs while waiting, weekends and holidays |
+
+**Current demand:**
+
+| Scenario | Mean wait (days) | 90th percentile | Waiting over 18 weeks |
+|---|---|---|---|
+| Baseline | 142 | 204 | 59% |
+| +1 procedure slot a week | 138 | 200 | 55% |
+| Assessment 2 weeks faster | 128 | 183 | 47% |
+| Both | 124 | 179 | 43% |
+
+**If referrals grow** (mean wait in days, two years after growth begins):
+
+| Referral growth | No added capacity | +2 procedure slots only | +2 slots at all three stages | +3 slots at all three stages |
+|---|---|---|---|---|
+| +10% | 194 | 143 | 138 | 136 |
+| +20% | 277 | 178 | 150 | 139 |
+| +30% | 364 | 250 | 206 | 155 |
+
+What this suggests, and its limits:
+
+- **At today's demand, one extra slot changes little** (142 to 138 days). The fixed delays inside the pathway matter more. The assessment result is arithmetic: a 2-week cut in the assumed delay lowers the total by about the same amount.
+- **Growth in referrals is where capacity matters.** Without added slots, 10% more referrals raise the average wait from 142 to 194 days, and 30% more push it to 364.
+- **The bottleneck moves.** Adding procedure slots alone stops helping once assessment and heart team capacity become the limit. At +30% referrals, procedure slots alone plateau near 248 days, while expanding all three stages brings the wait back toward 140.
+- **For market share:** growing the number of patients treated depends on capacity across the whole pathway, not on one stage. This supports levers 2 to 5 above.
+- **These are assumption-based results, not forecasts.** The 142-day total is the only calibration point. Capacity and stage delay values are assumptions and are set at the top of `simulate_pathway.py`. Change them and re-run.
+
+```
+python simulate_pathway.py
+```
+
+Outputs: `data/synthetic_tavi_pathway_baseline.csv` (one year of synthetic referrals), `results/scenario_levers.csv`, `results/scenario_stress_test.csv`, `charts/chart_pathway_scenarios.png`.
+
 ## Sub-questions behind the analysis
 
 1. **Volume and growth:** how have TAVI volumes changed compared with surgical aortic valve replacement (SAVR)?
@@ -106,7 +150,7 @@ python analyze_rtt.py
 - [x] Companion dashboard live
 - [x] RTT Cardiology and Cardiothoracic baseline added to `data/`
 - [x] Baseline analysis script and chart added
-- [ ] Pathway simulation (synthetic) added
+- [x] Pathway simulation (synthetic) added
 - [ ] Lever ranking added to the dashboard
 - [ ] Recommendations added to this README
 
