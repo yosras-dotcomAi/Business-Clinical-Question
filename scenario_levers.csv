@@ -1,0 +1,5 @@
+scenario,mean_wait_days,p90_wait_days,pct_waiting_over_18_weeks
+Baseline,142.4,203.8,59.3
++1 procedure slot a week,138.2,200.3,55.0
+Assessment 2 weeks faster,128.2,182.6,46.7
+Both,124.1,179.1,42.7

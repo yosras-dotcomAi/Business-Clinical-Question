@@ -1,0 +1,41 @@
+referral_growth_pct,capacity_added_to,extra_slots_per_week,mean_wait_days,p90_wait_days,pct_waiting_over_18_weeks
+0,procedure only,0,142.4,202.9,59.5
+0,procedure only,1,137.9,199.9,54.5
+0,procedure only,2,137.0,199.7,53.7
+0,procedure only,3,136.7,199.7,53.5
+0,procedure only,4,136.6,199.7,53.4
+0,all three stages,0,142.4,202.9,59.5
+0,all three stages,1,136.9,199.0,53.7
+0,all three stages,2,135.7,198.5,52.6
+0,all three stages,3,135.2,198.4,52.2
+0,all three stages,4,134.9,198.3,52.1
+10,procedure only,0,194.3,254.8,91.9
+10,procedure only,1,148.4,209.1,65.3
+10,procedure only,2,142.6,204.7,59.1
+10,procedure only,3,141.9,204.7,58.3
+10,procedure only,4,141.6,204.7,58.0
+10,all three stages,0,194.3,254.8,91.9
+10,all three stages,1,145.6,206.7,62.6
+10,all three stages,2,137.8,200.7,54.4
+10,all three stages,3,136.3,200.1,53.1
+10,all three stages,4,135.8,200.0,52.7
+20,procedure only,0,277.0,339.7,99.9
+20,procedure only,1,203.2,261.6,95.7
+20,procedure only,2,178.2,238.6,86.7
+20,procedure only,3,176.8,238.2,85.4
+20,procedure only,4,176.3,238.1,84.8
+20,all three stages,0,277.0,339.7,99.9
+20,all three stages,1,199.4,258.8,94.3
+20,all three stages,2,149.8,210.0,66.8
+20,all three stages,3,138.7,200.7,55.7
+20,all three stages,4,136.7,199.8,53.7
+30,procedure only,0,363.6,431.7,100.0
+30,procedure only,1,281.1,342.2,100.0
+30,procedure only,2,250.0,312.7,99.7
+30,procedure only,3,248.7,312.5,99.7
+30,procedure only,4,248.2,312.5,99.7
+30,all three stages,0,363.6,431.7,100.0
+30,all three stages,1,276.2,339.4,99.9
+30,all three stages,2,205.8,266.3,95.4
+30,all three stages,3,155.2,215.4,71.6
+30,all three stages,4,139.7,201.9,56.7
