@@ -161,6 +161,5 @@ Outputs: `data/synthetic_tavi_pathway_baseline.csv` (one year of synthetic refer
 - Patient-level pathway data is synthetic. Market share inputs are assumptions until real figures are available from public sources.
 
 ## Author
-
-**Yosra El-Naggar**, Nursing Supervisor (Critical Care and Cardiac Catheterization) and Healthcare Data Analyst.
+**Yosra El Nagar**, Cath Lab Head Nurse moving into Healthcare Data Analytics. [LinkedIn](https://www.linkedin.com/in/yosra-nagar-9a6862118/)
 GitHub: [@yosras-dotcomAi](https://github.com/yosras-dotcomAi)
